@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>INICIO QUBIST</title>
+<style>
+    th {
+        background-color: black;
+    }
+    body {
+        background-color: LightGray;
+    }
+    table {
+        margin: 30px;
+    }
+    .dropbtn {
+        background-color: #000000;
+        color: rgb(82, 43, 146);
+        padding: 16px;
+        font-size: 16px;
+        border: #000000;
+        cursor: pointer;
+    }
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #2980B9;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+</style>
+<body>    
+    <table>
+        <tr>
+            <th>
+                <div class="gallery">
+                    <a target="_blank" href="Imagenes/Logo.png">
+                        <img src="Imagenes/Logo.png" alt="Logo" width="142" height="107">
+                    </a>
+                </div>
+            </th>
+            <th>
+                <a href="file:///D:/Lenguaje_de_Marcas/UD2_ejercicio1_FernandezPablo/index.html">Inicio</a>
+            </th>
+            <th>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><u>Productos</u></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="file:///D:/Lenguaje_de_Marcas/UD2_ejercicio1_FernandezPablo/Paginas/MC.html" target="_blank">Camisetas de Manga Corta</a>
+                      <a href="file:///D:/Lenguaje_de_Marcas/UD2_ejercicio1_FernandezPablo/Paginas/ML.html" target="_blank">Camisetas de Manga Larga</a>
+                      <a href="file:///D:/Lenguaje_de_Marcas/UD2_ejercicio1_FernandezPablo/Paginas/SD.html" target="_blank">Sudaderas</a>
+                    </div>
+                </div>
+                <script>
+                    function myFunction() {
+                      document.getElementById("myDropdown").classList.toggle("show");
+                    }
+                    window.onclick = function(event) {
+                      if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                          var openDropdown = dropdowns[i];
+                          if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                          }
+                        }
+                      }
+                    }
+                </script>
+            </th>
+            <th>
+                <a href="file:///D:/Lenguaje_de_Marcas/UD2_ejercicio1_FernandezPablo/Paginas/Info.html" target="_blank">Información</a>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="gallery">    
+                    <a target="_blank" href="https://www.japonshop.com/dulces-snacks/patatas-fritas-walkers-lays-sabor-salchica-bacon-edicion-naviden-25-grs">
+                        <img src="Imagenes/Anuncio1.png" alt="A1">
+                    </a>
+                </div>
+            </td> 
+            <td colspan="3">
+                <div class="gallery">    
+                    <a target="_blank" href="Imagenes/1.png">
+                        <img src="Imagenes/1.png" alt="Publi">
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <footer><img src="Imagenes/Footer.png" alt="Footer"></footer>
+</body>
+</html>  
